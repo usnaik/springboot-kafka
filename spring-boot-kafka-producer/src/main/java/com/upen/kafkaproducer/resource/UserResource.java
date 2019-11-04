@@ -23,7 +23,7 @@ public class UserResource {
 	@GetMapping("/publish/{name}")
 	public String post(@PathVariable("name") final String message) {
 		
-		kafkaTemplate.send(TOPIC,new User(message, "admin", 1200000L));
+		kafkaTemplate.send(TOPIC,new User(message, "Technology", 12000L));
 		
 		return "Published Successfully";
 	}
