@@ -21,6 +21,6 @@ public class KafkaProducerController {
 	@PostMapping
 	public ResponseEntity<String> sendData(@RequestBody Student student){
 		sender.sendData(student);
-		return new ResponseEntity<>("Data sent to Kafka", HttpStatus.OK);
+		return new ResponseEntity<>("Data sent to Kafka : " + student.toString(), HttpStatus.OK);
 	}
 }

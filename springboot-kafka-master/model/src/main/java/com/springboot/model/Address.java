@@ -12,6 +12,17 @@ public class Address implements Serializable {
 	private String city;
 	private String postCode;
 
+	public Address(String apartment, String street, String state, String city, String postCode) {
+		this.apartment = apartment;
+		this.street = street;
+		this.state = state;
+		this.city = city;
+		this.postCode = postCode;
+	}
+
+	public Address() {
+	}
+
 	public String getApartment() {
 		return apartment;
 	}
@@ -50,5 +61,11 @@ public class Address implements Serializable {
 
 	public void setPostCode(String postCode) {
 		this.postCode = postCode;
+	}
+
+	@Override
+	public String toString() {
+		return "Address [apartment=" + apartment + ", street=" + street + ", state=" + state + ", city=" + city
+				+ ", postCode=" + postCode + "]";
 	}
 }
